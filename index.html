@@ -4,21 +4,6 @@
 <title>Camera Access</title>
 </head>
 <body>
-<button id="startButton">Start Camera</button>
-<video id="cameraView" autoplay></video>
-
-<script>
-       const startButton = document.getElementById('startButton');
-       const cameraView = document.getElementById('cameraView');
-
-       startButton.addEventListener('click', async () => {
-           try {
-               const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
-               cameraView.srcObject = stream;
-           } catch (error) {
-               console.error('Error accessing the camera:', error);
-           }
-       });
-</script>
+<input type="file" capture="user" accept="video/*"> Find </input>
 </body>
 </html>
